@@ -1,0 +1,13 @@
+@mixin hover {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+@mixin center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

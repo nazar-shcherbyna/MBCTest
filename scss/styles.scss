@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@400;700&display=swap');
+@import 'normalize';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Mulish', sans-serif;
+}
+
+a, button {
+    transition: all .3s ease-in-out 
+}
+
+h1 {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    height: 100vh;
+    &__nav {
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
+    &__nav--pos {
+        @include center;
+    }
+    &__link {
+        @include center;
+        list-style: none;
+        li {
+            margin: 15px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 2.1rem;
+            color: #000;
+            font-weight: 700; 
+        }
+    }
+}
+
+.content {
+    padding-top: 100px;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    background: url('../img/Background.jpg') 50% 100%/auto 90% no-repeat;
+    background-color: #131824;
+    &__title {
+        padding-top: 200px;
+        text-align: center;
+        font-size: 3.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    &__price {
+        font-size: 1.6rem;
+        line-height: 20px;
+        margin: 25px 0;
+        text-align: center;
+    }
+    &__price--sale {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: line-through;
+    }
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: 15px 25px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        background-color: #c00;
+        border: 1px solid #950000;
+        border-radius: 4px;
+        outline: none;
+        color: #fff;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
