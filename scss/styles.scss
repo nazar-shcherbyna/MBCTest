@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@400;700&display=swap');
-@import 'normalize';
 @import 'mixins';
+@import 'humburger';
 
 * {
     box-sizing: border-box;
@@ -33,6 +33,9 @@ h1 {
         position: fixed;
         width: 100%;
         z-index: 5;
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
     }
     &__nav--pos {
         @include center;
